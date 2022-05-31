@@ -1,24 +1,33 @@
-# README
+# Blog application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a full-fledged blog application where user can create an account, write blogs, leave comments on other people's blogs and leave a like if he like someone's blog.
 
-Things you may want to cover:
+## Built with
 
-* Ruby version
+- Ruby on Rails
+- CSS
+- HTML
+- Javascript
 
-* System dependencies
+## Setup Instructions
 
-* Configuration
+1. Clone this repository
+2. Run `bundle install` in your terminal
+3. Open `irb` terminal
+4. Run run `rails s` or `rails server` to start the puma server.
 
-* Database creation
+## Author
 
-* Database initialization
+👤 **Muneeb Ul Rehman**
 
-* How to run the test suite
+- GitHub: [@Muneeb](https://github.com/muneebulrehman)
+- Twitter: [@NeatCoder\_](https://twitter.com/NeatCoder_)
+- LinkedIn: [Muneeb](https://www.linkedin.com/in/muneeb-ul-rehman-33903b159/)
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributions, issues, and feature requests are welcome!
 
-* Deployment instructions
+Feel free to check the [issues page](https://github.com/muneebulrehman/blog-with-rails/issues).
 
-* ...
+## Show your support
+
+Give a ⭐️ if you like this project!
