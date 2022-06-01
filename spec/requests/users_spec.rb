@@ -11,7 +11,7 @@ RSpec.describe 'Users', type: :request do
       it 'shows correct view' do
         expect(response).to render_template(:index)
       end
-      
+
       it 'Check for the response body' do
         expect(response.body).to include('All the users will be displayed here')
       end
@@ -20,7 +20,7 @@ RSpec.describe 'Users', type: :request do
 
   describe 'GET #show' do
     before(:each) do
-      get'users/1'
+      get 'users/1'
       it 'Check for response code as 200' do
         expect(response).to have_http_status(:ok)
       end
