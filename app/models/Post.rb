@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  after_save :update_post_counter
   belongs_to :user
   has_many :comments, :likes
 
@@ -9,5 +10,4 @@ class Post < ApplicationRecord
   def recent_comments
     self.comments.limit(5)
   end
-
 end

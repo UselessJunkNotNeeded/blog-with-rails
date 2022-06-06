@@ -4,5 +4,4 @@ class User < ApplicationRecord
   def three_most_recent_posts
     self.posts.limit(3)
   end
-
 end
