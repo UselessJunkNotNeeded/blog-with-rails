@@ -1,7 +1,9 @@
 class User < ApplicationRecord
-  has_many :posts, :comments, :likes
+  has_many :posts
+  has_many :likes
+  has_many :comments
 
   def three_most_recent_posts
-    self.posts.limit(3)
+    posts.limit(3)
   end
 end
