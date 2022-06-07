@@ -1,3 +1,44 @@
-h1 {
-  color: red;
+.main-heading {
+  color: orangered;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.image-container img {
+  height: 80px;
+  width: 80px;
+}
+
+.user-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  border: 2px solid black;
+  padding: 0 3rem;
+  width: 30rem;
+}
+
+.user-details p {
+  align-self: flex-end;
+  font-weight: bold;
+}
+
+.show-user-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
