@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  margin: 0.25rem 0 1rem;
 }
 
 .image-container img {
@@ -89,4 +90,18 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 0.25rem;
+}
+
+.posts-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #000;
 }

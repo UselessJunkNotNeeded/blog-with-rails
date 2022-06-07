@@ -6,3 +6,10 @@
     <span> Likes: <%= obj.likes_counter %> </span>
   </div>
 </div>
+<% if details && comments.length > 0 %>
+  <div class="comments">
+    <% comments.each do |comment| %>
+      <%= render '/shared/comments', comment: comment %>
+    <% end %>
+  </div>
+<% end %>
