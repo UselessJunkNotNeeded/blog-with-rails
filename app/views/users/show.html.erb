@@ -1,3 +1,15 @@
 <div class="show-user-container">
   <%= render '/shared/user', obj: @user %>
-</>
+  <div class="user-bio">
+    <p>Bio</p>
+    <p> <%= @user.bio %> </p>
+  </div>
+  <div class="user-posts">
+    <% @posts.each_with_index do|post, index| %>
+      <%= render '/shared/post', obj: post, idx: index%>
+    <% end %>
+  </div>
+  <% if @user.posts_counter > 3 %>
+    <button class="btn-all-posts"> <%= link_to 'Show all posts', user_posts_path(@user) %> </button>
+  <% end %>
+</div>
