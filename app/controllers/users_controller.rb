@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :posts]
+  before_action :set_user, only: %i[show posts]
 
   def index
     @users = User.all
@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :photo, :bio)
   end
