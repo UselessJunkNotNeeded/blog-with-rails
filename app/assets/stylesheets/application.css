@@ -104,4 +104,14 @@ body {
   flex-direction: column;
   gap: 0.5rem;
   border: 1px solid #000;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.no-posts {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  background-color: rgb(226, 108, 143);
+  padding: 0.25rem 1rem;
+  border-radius: 5px;
 }
