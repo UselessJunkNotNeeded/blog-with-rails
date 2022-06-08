@@ -1,0 +1,11 @@
+<div class="each-post">
+  <p class="post-num">Post  #<%= idx+1 %> </p>
+  <p> <%= obj.text.length > 80 ? obj.text.first(80) + '...' : obj.text %> </p>
+  <div class="post-interactions">
+    <span>Comments: <%= obj.comments_counter %>, </span>
+    <span> Likes: <%= obj.likes_counter %> </span>
+  </div>
+  <% if details && comments.length > 0 %>
+    <%= render '/shared/comments', comments: comments %>
+  <% end %>
+</div>

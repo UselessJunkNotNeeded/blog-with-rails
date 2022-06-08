@@ -1,1 +1,13 @@
-<h2>All the posts will be displayed here</h2>
+<section class="posts-section">
+  <%= render '/shared/user', obj: @user %>
+  <% if @posts.length > 0 %>
+    <div class="user-posts">
+      <% @posts.each_with_index do|post, index| %>
+        <%= render '/shared/post', obj: post, idx: index, comments: post.recent_comments, details: true %>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="no-posts" >This user has no posts yet.</p>
+  <% end %>
+</section>
+<p></p>
