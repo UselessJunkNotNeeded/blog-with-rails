@@ -6,7 +6,7 @@ RSpec.describe User, type: :model do
       @user = User.new(name: 'Tony stark', photo: 'link_to_photo', bio: 'I am iron man')
     end
 
-    before {@user.save}
+    before { @user.save }
 
     it 'Check for name' do
       @user.name = nil

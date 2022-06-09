@@ -4,7 +4,8 @@ RSpec.describe Post, type: :model do
   describe 'Post model' do
     before(:each) do
       @user = User.new(id: 1, name: 'Iron Man', photo: 'Iron_photo', bio: 'I am iron man')
-      @post = Post.new(author: @user, title: 'Spiderman Sucks', text: 'Ten reasons why spiderman sucks', comments_counter: 0, likes_counter: 0)
+      @post = Post.new(author: @user, title: 'Spiderman Sucks', text: 'Ten reasons why spiderman sucks',
+                       comments_counter: 0, likes_counter: 0)
     end
 
     it 'whether atributes pass validation or not' do
