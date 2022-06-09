@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @user = User.find(params[:user_id])
     @posts = Post.where(author: params[:user_id])
@@ -19,7 +18,7 @@ class PostsController < ApplicationController
     @post = Post.new(user_params)
     @post.author_id = params[:user_id]
     if @post.save
-      flash[:notice] = "Post created successfully"
+      flash[:notice] = 'Post created successfully'
       redirect_to user_posts_path
     else
       render 'new'
