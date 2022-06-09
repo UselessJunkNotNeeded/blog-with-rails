@@ -14,6 +14,6 @@ class LikesController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:like).permit(:text)
   end
 end
