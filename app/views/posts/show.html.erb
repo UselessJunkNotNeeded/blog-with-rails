@@ -1,3 +1,4 @@
+<%= link_to "Back", user_posts_path %>
 <div class="container">
   <div class="each-post">
     <div class="flex">
@@ -9,6 +10,10 @@
         <span>Comments: <%= @post.comments_counter %>, </span>
         <span> Likes: <%= @post.likes_counter %> </span>
       </div>
+    </div>
+    <div class="title-like">
+      <h4>Title:  <%= @post.title %> </h4>
+      <button class="like-button"> <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %></button>
     </div>
     <p class="post-text"> <%= @post.text  %> </p>
     <% if @post.comments.length > 0 %>
