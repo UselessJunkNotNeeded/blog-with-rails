@@ -1,8 +1,12 @@
+<%= link_to "Back", users_path %>
 <div class="show-user-container">
   <%= render '/shared/user', obj: @user %>
   <div class="user-bio">
     <p>Bio</p>
     <p> <%= @user.bio %> </p>
+  </div>
+  <div class="create-post">
+    <%= link_to 'Create post', new_user_post_path(@user.id)  %>
   </div>
   <% if @posts.length > 0 %>
     <div class="user-posts">
