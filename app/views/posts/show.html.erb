@@ -13,7 +13,7 @@
     </div>
     <div class="title-like">
       <h4>Title:  <%= @post.title %> </h4>
-      <button class="like-button"> <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %></button>
+      <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %>
     </div>
     <p class="post-text"> <%= @post.text  %> </p>
     <% if @post.comments.length > 0 %>

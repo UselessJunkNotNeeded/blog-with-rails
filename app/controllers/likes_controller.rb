@@ -8,7 +8,7 @@ class LikesController < ApplicationController
     @like.author_id = params[:user_id]
     @like.post_id = params[:post_id]
     if @like.save
-      flash[:notice] = "Comment created successfully"
+      flash[:notice] = "Post liked"
       redirect_to user_post_path(params[:user_id], params[:post_id])
     else
       redirect_to user_post_path(params[:user_id], params[:post_id])

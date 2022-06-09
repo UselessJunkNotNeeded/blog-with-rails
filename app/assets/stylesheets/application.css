@@ -141,3 +141,8 @@ body {
 .container {
   margin-top: 3rem;
 }
+
+.title-like {
+  display: flex;
+  justify-content: space-between;
+}
