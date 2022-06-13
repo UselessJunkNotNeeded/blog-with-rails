@@ -1,0 +1,7 @@
+<h3>Hello there. This is the home page</h3>
+<% if !user_signed_in? %>
+  <p> <%= link_to 'Login', new_user_session_url %> </p>
+<% else %>
+  <p>Welcome</p>
+  <%= button_to "Sign out", destroy_user_session_path,method: :destroy %>
+<% end %>
