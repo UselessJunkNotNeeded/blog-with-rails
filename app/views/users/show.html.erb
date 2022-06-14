@@ -5,9 +5,13 @@
     <p>Bio</p>
     <p> <%= @user.bio %> </p>
   </div>
-  <div class="create-post">
-    <%= link_to 'Create post', new_user_post_path(@user.id)  %>
-  </div>
+  <% post = Post.new %>
+  <% post.author = @user %>
+  <% if can? :create, post %>
+    <div class="create-post">
+      <%= link_to 'Create post', new_user_post_path(@user.id)  %>
+    </div>
+  <% end %>
   <% if @posts.length > 0 %>
     <div class="user-posts">
       <% @posts.each_with_index do|post, index| %>

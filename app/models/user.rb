@@ -12,4 +12,9 @@ class User < ApplicationRecord
   def three_most_recent_posts
     posts.limit(3)
   end
+
+  def is_admin?
+    @role = "admin"
+  end
+
 end

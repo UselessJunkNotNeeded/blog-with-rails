@@ -13,9 +13,14 @@
     </div>
     <div class="title-like">
       <h4>Title:  <%= @post.title %> </h4>
-      <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %>
+      <% if can? :create, Like %>
+        <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %>
+      <% end %>
     </div>
     <p class="post-text"> <%= @post.text  %> </p>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete Post', user_post_path(@user.id, @post.id), method: :delete  %>
+    <%end%>
     <% if @post.comments.length > 0 %>
       <%= render '/shared/comments', comments: @comments %>
     <% else %>

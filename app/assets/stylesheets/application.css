@@ -179,14 +179,6 @@ a {
   border: 1px solid black;
 }
 
-.msg {
-  padding: 0.5rem;
-  text-align: center;
-  background: rgb(226, 108, 143);
-  width: fit-content;
-  margin: 1rem auto 0;
-}
-
 .home {
   margin-top: 1rem;
   display: flex;
@@ -199,4 +191,38 @@ a {
 .all-users {
   padding: 0.5rem 1rem;
   border: 1px solid grey;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.notification {
+  /* padding: 0.5rem; */
+  text-align: center;
+  background: rgb(226, 108, 143);
+  width: fit-content;
+  margin: 0.25rem auto 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 50%;
+  z-index: 999;
+  opacity: 0.9;
+  animation: cssAnimation 0s 4s forwards;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-profile {
+  padding: 1rem 0.5rem;
+  border: 1px solid grey;
+  border-radius: 5px;
 }
