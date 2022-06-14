@@ -2,7 +2,7 @@
 <h2 class="text-center">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-   <div class="d-flex justify-content-center flex-columnm w-50">
+   <div class="d-flex justify-content-center flex-column w-50">
   <div class="field mt-4">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email",style: "width: 100%",class: "form-control" %>
