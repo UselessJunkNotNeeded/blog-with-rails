@@ -9,7 +9,6 @@ class UsersController < ApplicationController
   def show
     @posts = @user.three_most_recent_posts
   end
-  
 
   private
 
