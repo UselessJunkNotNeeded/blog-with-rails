@@ -178,3 +178,25 @@ a {
   padding: 0.25rem;
   border: 1px solid black;
 }
+
+.msg {
+  padding: 0.5rem;
+  text-align: center;
+  background: rgb(226, 108, 143);
+  width: fit-content;
+  margin: 1rem auto 0;
+}
+
+.home {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.all-users {
+  padding: 0.5rem 1rem;
+  border: 1px solid grey;
+}
