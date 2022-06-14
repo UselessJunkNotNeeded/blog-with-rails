@@ -5,12 +5,12 @@
    <div class="d-flex justify-content-center flex-column">
   <div class="field mt-4">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email",style: "width: 100%" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",style: "width: 100%",class: "form-control" %>
   </div>
 
   <div class="field mt-4">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password",style: "width: 100%" %>
+    <%= f.password_field :password, autocomplete: "current-password",style: "width: 100%",class: "form-control" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
@@ -21,7 +21,7 @@
   <% end %>
 
   <div class="actions mt-4">
-    <%= f.submit "Log in",style: "width: 100%" %>
+    <%= f.submit "Log in",style: "width: 100%",class: "button form-control" %>
   </div>
   </div>
 <% end %>
