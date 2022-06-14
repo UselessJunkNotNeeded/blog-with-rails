@@ -2,7 +2,7 @@
   <div class="each-post-heading">
     <p class="post-num">Post  #<%= idx+1 %>: <%= obj.title%> </p>
     <p> <%= obj.text.length > 80 ? obj.text.first(80) + '...' : obj.text %> </p>
-    <%= link_to 'View post', user_post_path(@user.id, obj.id)  %>
+    <%= link_to 'View post', user_post_path(@user.id, obj.id), class: "view-post"  %>
   </div>
   <div class="post-interactions">
     <span>Comments: <%= obj.comments_counter %>, </span>
