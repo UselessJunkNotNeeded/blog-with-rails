@@ -146,3 +146,35 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+.devise-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.devise-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sign-up {
+  display: block;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid black;
+}
