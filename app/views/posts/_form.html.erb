@@ -11,22 +11,16 @@
 
 <%= form_with model: @post, url: user_posts_path, method: :post, local: true do |f| %>
 <div class="devise-form">
+  <div class="field">
+        <%= f.label :title %><br/>
+        <%= f.text_field :title %>
+    </div>
+    <div class="field">
+        <%= f.label :text %><br/>
+        <%= f.text_field :text %>
+    </div>
+    <div class="actions">
+        <%= f.submit %>
+     </div>
 </div>
-   <div class="field">
-        <%= f.label :name %><br/>
-        <%= f.text_field :name, :required => "required", :placeholder => "Enter your name" %>
-      </div>
-  <p>
-    <%= f.label :title %>
-    <br/>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :text %>
-    <br/>
-    <%= f.text_area :text %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
 <% end %>
