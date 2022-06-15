@@ -31,7 +31,7 @@ RSpec.describe "LoginPage", type: :system do
       password: 'password', password_confirmation: 'password',
       photo: 'photo url',
       bio: 'I am spiderman')
-    user.confirm()
+    user.save
     within("#new_user") do
       fill_in 'Email', with: 'admin@email.com'
       fill_in 'Password', with: 'password'
