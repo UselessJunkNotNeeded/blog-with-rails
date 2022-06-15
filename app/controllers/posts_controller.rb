@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(user_params)
-    # @post.author_id = params[:user_id]
+    @post.author_id = params[:user_id]
     if @post.save
       flash[:notice] = 'Post created successfully'
       redirect_to user_posts_path
@@ -29,10 +29,10 @@ class PostsController < ApplicationController
 
   def destroy
     @post = Post.find(params[:id])
-    if @post.destroy
-      flash[:success] = "Post deleted successfully"
-      redirect_to user_posts_path
-    end
+    return unless @post.destroy
+
+    flash[:success] = 'Post deleted successfully'
+    redirect_to user_posts_path
   end
 
   def user_params

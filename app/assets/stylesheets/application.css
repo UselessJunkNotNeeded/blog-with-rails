@@ -247,7 +247,6 @@ a {
 .create-post {
   display: block;
   width: fit-content;
-  /* margin-top: 1rem; */
   padding: 0.5rem 1rem;
   border: 1px solid rgb(90, 90, 255);
   border-radius: 5px;
@@ -267,4 +266,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.each-comment {
+  display: flex;
+  gap: 1rem;
 }

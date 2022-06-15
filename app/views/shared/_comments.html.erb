@@ -4,6 +4,9 @@
     <div class="each-comment">
       <span> <%= comment.author.name %>: </span>
       <span> <%= comment.text %> </span>
+      <% if can? :destroy, comment %>
+        <%= button_to "Delete", user_post_comment_path(comment.author.id, comment.post.id, comment.id), method: :delete %>
+      <% end %>
     </div>
   <% end %>
 </div>
