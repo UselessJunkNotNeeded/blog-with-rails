@@ -215,7 +215,7 @@ a {
   animation: cssAnimation 0s 4s forwards;
 }
 
-.flex {
+.flexd {
   display: flex;
   align-items: center;
   gap: 1rem;

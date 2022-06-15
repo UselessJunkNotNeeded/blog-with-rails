@@ -8,19 +8,18 @@
     </ul>
   </div>
 <%end%>
-
 <%= form_with model: @post, url: user_posts_path, method: :post, local: true do |f| %>
-<div class="devise-form">
-  <div class="field">
-        <%= f.label :title %><br/>
-        <%= f.text_field :title %>
+  <div class="devise-form">
+    <div class="field">
+      <%= f.label :title %><br/>
+      <%= f.text_field :title %>
     </div>
     <div class="field">
-        <%= f.label :text %><br/>
-        <%= f.text_field :text %>
+      <%= f.label :text %><br/>
+      <%= f.text_area :text, cols: 20, rows: 10 %>
     </div>
     <div class="actions">
-        <%= f.submit %>
-     </div>
-</div>
+      <%= f.submit %>
+    </div>
+  </div>
 <% end %>
