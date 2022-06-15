@@ -1,4 +1,4 @@
-<%= link_to "Back", user_path(@user) %>
+<%= link_to "Back", user_path(@user), class: "back-btn" %>
 <section class="posts-section">
   <%= render '/shared/user', obj: @user %>
   <% if @posts.length > 0 %>

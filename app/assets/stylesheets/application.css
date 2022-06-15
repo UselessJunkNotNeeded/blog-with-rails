@@ -178,3 +178,97 @@ a {
   padding: 0.25rem;
   border: 1px solid black;
 }
+
+.home {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.all-users {
+  padding: 0.5rem 1rem;
+  border: 1px solid grey;
+}
+
+@keyframes cssAnimation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.notification {
+  /* padding: 0.5rem; */
+  text-align: center;
+  background: rgb(226, 108, 143);
+  width: fit-content;
+  margin: 0.25rem auto 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 50%;
+  z-index: 999;
+  opacity: 0.9;
+  animation: cssAnimation 0s 4s forwards;
+}
+
+.flexd {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.view-profile {
+  padding: 1rem 0.5rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.home-btn {
+  display: block;
+  float: left;
+  padding: 0.5rem 1rem;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.back-btn {
+  display: block;
+  width: fit-content;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(90, 90, 255);
+  border-radius: 5px;
+}
+
+.create-post {
+  display: block;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgb(90, 90, 255);
+  border-radius: 5px;
+}
+
+.view-post {
+  display: block;
+  width: fit-content;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgb(240, 65, 243);
+  border-radius: 5px;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.each-comment {
+  display: flex;
+  gap: 1rem;
+}

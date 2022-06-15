@@ -1,6 +1,10 @@
+<%= link_to "Home", root_path, class: "home-btn"  %>
 <h1 class="main-heading">All the users</h1>
 <div class="main-container">
   <% @users.each do |user| %>
-    <%= render 'shared/user', obj: user %>
+    <div class="flexd">
+      <%= render 'shared/user', obj: user %>
+      <%= link_to "View profile", user_path(user.id), class: "view-profile"   %>
+    </div>
   <% end %>
 </div>

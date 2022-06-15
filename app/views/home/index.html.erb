@@ -1,8 +1,12 @@
-<h3>Hello there. This is the home page</h3>
-<% if !user_signed_in? %>
-  <p> <%= link_to 'Login', new_user_session_path %> </p>
-  <p> <%= link_to 'Signup', new_user_registration_path %> </p>
-<% else %>
-  <p>Welcome</p>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
-<% end %>
+<div class="home">
+  <h3>Hello <%= current_user.name %> </h3>
+  <% if !user_signed_in? %>
+    <p> <%= link_to 'Login', new_user_session_path %> </p>
+    <p> <%= link_to 'Signup', new_user_registration_path %> </p>
+  <% else %>
+    <%= render 'shared/user', obj: current_user %>
+    <p class="all-users"><%= link_to 'All users', users_path %></p>
+    <p> <%= link_to "My Profile", current_user %> </p>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% end %>
+</div>

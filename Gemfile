@@ -78,3 +78,7 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'ffi', '~> 1.9', '>= 1.9.10'
 
 gem 'bullet', group: 'development'
+
+gem 'devise'
+
+gem 'cancancan'

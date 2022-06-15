@@ -1,4 +1,4 @@
-<%= link_to "Back", user_posts_path %>
+<%= link_to "Back", user_posts_path, class: "back-btn" %>
 <div class="container">
   <div class="each-post">
     <div class="flex">
@@ -13,13 +13,31 @@
     </div>
     <div class="title-like">
       <h4>Title:  <%= @post.title %> </h4>
-      <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %>
+      <% if can? :create, Like %>
+        <%= button_to "Like", user_post_likes_path(@user.id, @post.id), method: :post %>
+      <% end %>
     </div>
     <p class="post-text"> <%= @post.text  %> </p>
+    <% if can? :destroy, @post %>
+      <%= button_to 'Delete Post', user_post_path(@user.id, @post.id), method: :delete  %>
+    <%end%>
     <% if @post.comments.length > 0 %>
       <%= render '/shared/comments', comments: @comments %>
     <% else %>
       <p class="no-posts" >No comments yet</p>
     <% end %>
   </div>
+</div>
+<div class="comment-form">
+  <h3>Create new comments</h3>
+  <%= form_with model: @comment, url: user_post_comments_path(current_user.id, @post.id), method: :post, local: true do |f| %>
+    <p>
+      <%= f.label :text %>
+      <br/>
+      <%= f.text_area :text, required: true, cols: 50, rows: 6 %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
 </div>
