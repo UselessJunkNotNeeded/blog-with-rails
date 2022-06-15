@@ -10,6 +10,12 @@
 <%end%>
 
 <%= form_with model: @post, url: user_posts_path, method: :post, local: true do |f| %>
+<div class="devise-form">
+</div>
+   <div class="field">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, :required => "required", :placeholder => "Enter your name" %>
+      </div>
   <p>
     <%= f.label :title %>
     <br/>
