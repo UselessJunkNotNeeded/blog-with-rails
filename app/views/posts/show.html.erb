@@ -3,8 +3,7 @@
   <div class="each-post">
     <div class="flex">
       <div class="post-heading">
-        <p class="post-num">Post  By: </p>
-        <p class="post-user"> <%= @user.name %> </p>
+        <p class="post-num">Post  By: <span class="post-user"><%= @user.name %></span> </p>
       </div>
       <div class="post-interactions">
         <span>Comments: <%= @post.comments_counter %>, </span>
