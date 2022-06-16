@@ -9,10 +9,4 @@ class Api::PostsController < ApplicationController
       render json: @posts
     end
   end
-
-  def show
-    @post = Post.find(params[:id])
-    render json: @post, status: 200
-  end
-
 end
