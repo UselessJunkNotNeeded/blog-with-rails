@@ -4,16 +4,16 @@ RSpec.describe 'Users Show Page', type: :system do
   before do
     driven_by(:rack_test)
     @user = User.create(name: 'admin',
-      email: 'admin@email.com',
-      password: 'password', password_confirmation: 'password',
-      photo: 'photo-url',
-      bio: 'I am spiderman')
+                        email: 'admin@email.com',
+                        password: 'password', password_confirmation: 'password',
+                        photo: 'photo-url',
+                        bio: 'I am spiderman')
     @user.save
     @post1 = Post.create(author_id: @user.id, title: 'Post 1', text: 'This is first post')
     @post2 = Post.create(author_id: @user.id, title: 'Post 2', text: 'This is second post')
     @post3 = Post.create(author_id: @user.id, title: 'Post 3', text: 'This is third post')
     visit 'users/sign_in'
-    within("#new_user") do
+    within('#new_user') do
       fill_in 'Email', with: 'admin@email.com'
       fill_in 'Password', with: 'password'
     end
