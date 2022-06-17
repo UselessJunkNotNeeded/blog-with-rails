@@ -125,6 +125,7 @@ GEM
       activesupport (>= 5.0.0)
     json-schema (2.8.1)
       addressable (>= 2.4)
+    jwt (2.4.1)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -292,6 +293,7 @@ PLATFORMS
   x86_64-darwin-17
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   bullet
   cancancan
@@ -302,6 +304,7 @@ DEPENDENCIES
   ffi (~> 1.9, >= 1.9.10)
   importmap-rails
   jbuilder
+  jwt
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3)
