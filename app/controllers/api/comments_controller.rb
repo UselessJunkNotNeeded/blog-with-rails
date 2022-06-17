@@ -1,4 +1,6 @@
 class Api::CommentsController < ApplicationController
+  before_action :authorize_request
+  skip_before_action :authenticate_user!
   include Response
   def index
     @post = Post.find(params[:post_id])
@@ -13,7 +15,7 @@ class Api::CommentsController < ApplicationController
   def create
     @comment = Comment.create(params.require(:comment).permit(:text))
     @comment.post_id = params[:post_id]
-    @comment.author_id = params[:user_id]
+    @comment.author = current_user
     if @comment.save
       render json: @comment, status: 200
     else

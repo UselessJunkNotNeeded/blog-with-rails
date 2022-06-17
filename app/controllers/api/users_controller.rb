@@ -1,4 +1,6 @@
 class Api::UsersController < ApplicationController
+  before_action :authorize_request
+  skip_before_action :authenticate_user!
   include Response
   def index
     @users = User.all
