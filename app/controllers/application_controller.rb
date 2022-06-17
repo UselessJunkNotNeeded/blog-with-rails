@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
   protect_from_forgery prepend: true
   before_action :permitted_parameters, if: :devise_controller?
   # before_action :authenticate_request
