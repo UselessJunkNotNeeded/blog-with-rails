@@ -6,7 +6,7 @@ class Api::CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comments = @post.comments
     if @comments.empty?
-      json_response({res: 'No comments'})
+      json_response({ res: 'No comments' })
     else
       render json: @comments, status: :ok
     end
@@ -19,7 +19,7 @@ class Api::CommentsController < ApplicationController
     if @comment.save
       render json: @comment, status: 200
     else
-      json_response({res: 'Failed to create comment'}, status: 400)
+      json_response({ res: 'Failed to create comment' }, status: 400)
     end
   end
 end
